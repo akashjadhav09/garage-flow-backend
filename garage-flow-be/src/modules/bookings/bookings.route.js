@@ -26,11 +26,11 @@ router.delete("/:id", deleteBooking);
 export default router;
 
 //Test apis
-//http://localhost:3000/api/v1/bookings - POST/GET
-//http://localhost:3000/api/v1/bookings/:userId - GET
-//http://localhost:3000/api/v1/bookings/:id - GET
-//http://localhost:3000/api/v1/bookings/:id - PUT
-//http://localhost:3000/api/v1/bookings/:id - DELETE
+//http://localhost:5000/api/v1/bookings - POST/GET
+//http://localhost:5000/api/v1/bookings/:userId - GET
+//http://localhost:5000/api/v1/bookings/:id - GET
+//http://localhost:5000/api/v1/bookings/:id - PUT
+//http://localhost:5000/api/v1/bookings/:id - DELETE
 
 
 //Payload for POST

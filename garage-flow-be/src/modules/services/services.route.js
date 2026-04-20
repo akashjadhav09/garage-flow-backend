@@ -25,10 +25,10 @@ export default router;
 
 
 //Test apis
-//http://localhost:3000/api/v1/services - POST/GET
-//http://localhost:3000/api/v1/services/:id - GET
-//http://localhost:3000/api/v1/services/:id - PUT
-//http://localhost:3000/api/v1/services/:id - DELETE
+//http://localhost:5000/api/v1/services - POST/GET
+//http://localhost:5000/api/v1/services/:id - GET
+//http://localhost:5000/api/v1/services/:id - PUT
+//http://localhost:5000/api/v1/services/:id - DELETE
 
 //payload for POST
 // {

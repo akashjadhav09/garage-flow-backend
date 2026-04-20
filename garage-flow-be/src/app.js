@@ -4,6 +4,7 @@ import cors from 'cors';
 
 import servicesRoute from "./modules/services/services.route.js";
 import bookingsRoute from "./modules/bookings/bookings.route.js";
+import authRoute from "./modules/auth/user.route.js";
 
 const app = express();
 
@@ -16,7 +17,9 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
-app.use(process.env.API_URI + "services", servicesRoute);
-app.use(process.env.API_URI + "bookings", bookingsRoute);
+const API_URI = process.env.API_URI || "/api/v1/";
 
+app.use(API_URI + "services", servicesRoute);
+app.use(API_URI + "bookings", bookingsRoute);
+app.use(API_URI + "auth", authRoute);
 export default app;

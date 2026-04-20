@@ -1,9 +1,11 @@
 import bookingModel from "./bookings.model.js";
 import serviceModel from "../services/services.model.js";
+import userModel from "../auth/user.model.js";
 
 //Create booking
 const createBooking = async (req, res) => {
-    console.log(req.body, "@req.body");
+    console.log("@req.body", req.body);
+
     try {
         const { userId, serviceId, vehicle, date, timeSlot, message } = req.body;
 
@@ -12,14 +14,14 @@ const createBooking = async (req, res) => {
         }
 
         //check if user exists
-        // const user = await userModel.findById(userId);
-        // console.log(user, "@user");
-        // if (!user) {
-        //     return res.status(404).json({
-        //         success: false,
-        //         message: "User not found",
-        //     });
-        // }
+        const user = await userModel.findById(userId);
+        console.log(user, "@user");
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "User not found",
+            });
+        }
 
         //check if service exists
         const service = await serviceModel.findById(serviceId);
